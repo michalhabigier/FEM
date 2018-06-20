@@ -1,0 +1,14 @@
+<GlobalData>
+    <H>0.100</H>
+    <B>0.100</B>
+    <nH>4</nH>
+    <nB>4</nB>
+    <initialTemperature>100</initialTemperature>
+    <simulationTime>500</simulationTime>
+    <simulationStepTime>50</simulationStepTime>
+    <ambientTemperature>1200</ambientTemperature>
+    <alfa>300</alfa>
+    <specificHeat>700</specificHeat>
+    <conductivity>25</conductivity>
+    <density>7800</density>
+</GlobalData>

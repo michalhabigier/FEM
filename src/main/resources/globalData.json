@@ -1,0 +1,17 @@
+{
+  "globalData" :
+    {
+      "H" : "0.1",
+      "B" : "0.1",
+      "nH" : "4",
+      "nB" : "4",
+      "initialTemperature" : "100",
+      "time" : "500",
+      "deltaTime" : "50",
+      "ambientTemperature" : "1200",
+      "alfa" : "300",
+      "cw" : "700",
+      "k" : "25",
+      "density" : "7800"
+    }
+}
