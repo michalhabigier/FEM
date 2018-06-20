@@ -20,18 +20,34 @@ public class GlobalData {
     private double density;
     private int ne; //l. elementow
     private int nw; //l. wezlow
-    private Data data;
+    private Fourier fourier;
 
     public void compute(Grid grid){
 
-        for (int i = 0; i < data.getH_global().length; ++i)
-            for (int j = 0; j < data.getH_global()[i].length; ++j)
-                data.getH_global()[i][j] = 0;
+        //zerowanie
+        for (int i = 0; i < fourier.getH_global().length; ++i)
+            for (int j = 0; j < fourier.getH_global()[i].length; ++j)
+                fourier.getH_global()[i][j] = 0;
 
-            for (int i = 0; i < data.getP_global().length; ++i)
-                data.getP_global()[i] = 0;
+            for (int i = 0; i < fourier.getP_global().length; ++i)
+                fourier.getP_global()[i] = 0;
 
-        //TODO Liczenie siatki
+        double[] dndx = new double[4]; //pochodne funkcji ksztaltu po x
+        double[] dndy = new double[4]; // ____________,,_____________ y
+        double[] x = new double[4];
+        double[] y = new double[4];
+        double[] temp0 = new double[4]; //wektor temperatur na węzłach
+
+        for(int el=0; el<ne; ++el){
+            for (int i = 0; i < fourier.getH_current().length; ++i)
+                for (int j = 0; j < fourier.getH_current()[i].length; ++j)
+                    fourier.getH_current()[i][j] = 0;
+
+            for (int i = 0; i < fourier.getP_current().length; ++i)
+                fourier.getP_current()[i] = 0;
+
+            //dane z siatki
+        }
     }
 
     public double getH() {
@@ -158,8 +174,8 @@ public class GlobalData {
         this.nw = nw;
     }
 
-    public void setData(Data data) {
-        this.data = data;
+    public void setFourier(Fourier fourier) {
+        this.fourier = fourier;
     }
 
     @Override

@@ -9,7 +9,7 @@ public class LocalElement {
     private double[][] dN_Eta;
     private double[][] shapesFunction;
 
-    private static LocalElement localElement = new LocalElement();
+    private static LocalElement localElement = null;
 
     private LocalElement(){
         dN_Eta = new double[BORDER][BORDER];
@@ -70,6 +70,7 @@ public class LocalElement {
     }
 
     public static LocalElement getLocalElement() {
+        if(localElement == null) localElement = new LocalElement();
         return localElement;
     }
 

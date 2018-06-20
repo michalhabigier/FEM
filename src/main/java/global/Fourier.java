@@ -2,7 +2,7 @@ package global;
 
 import local.LocalElement;
 
-public class Data {
+public class Fourier {
 
     private LocalElement localElement = LocalElement.getLocalElement();
     private double[][] H_current;
@@ -10,7 +10,7 @@ public class Data {
     private double[][] H_global;
     private double[] P_global;
 
-    public Data(int number, int nh) {
+    public Fourier(int number, int nh) {
         H_current = new double[number][number];
         P_current = new double[number];
         H_global = new double[nh][nh];
